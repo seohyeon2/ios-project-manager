@@ -4,7 +4,7 @@
 
 ## 💾 프로젝트 관리 앱 소개
 >**프로젝트 기간** : 2022-09-05 ~ 2022-09-16<br>
-**소개** : 해야할 일을 3단계로 구분하여 업무를 효율적으로 관리할 수 있는 앱입니다. <br>
+**소개** : 해야할 일을 3단계로 구분하여 업무를 효율적으로 관리할 수 있는 아이패드 앱입니다. <br>
 **리뷰어** : [**제이슨**](https://github.com/ehgud0670)
 
 <br>
@@ -23,6 +23,9 @@
 <br>
 
 ## 💡 기술 스택 선정 이유
+
+<details>
+<summary>기술 스택 선정 이유 펼쳐보기</summary>
 
 ### 1. Local DB : `Realm`
 
@@ -75,5 +78,63 @@
 - 이전의 프로젝트들을 진행하면서 View와 Model 사이의 의존성이 높아 리팩토링과, View에 대한 테스트를 진행하기가 어려웠습니다.
 - 이번 프로젝트에서는 View와 Model 사이의 의존성을 낮추고, testable한 코드를 작성해보고 싶어서 `MVVM` 구조를 선택했습니다.
 - 또한 제이슨께서 구두로 말씀해주신 것처럼 다른 하나의 뷰는 `MVP`를 적용하여 두 디자인 패턴에 어떤 차이가 있는지 공부해보도록 하겠습니다!
+</details>
 
+<br>
 
+## 구현 화면 📱
+
+| 홈 화면 | 할 일 옮기기 |
+|:-------:|:-------:|
+| <img src="https://user-images.githubusercontent.com/50102522/216857113-039adfe2-570a-472c-9b12-043815a3cf6b.png" width="500" height="450"/>| <img src="https://user-images.githubusercontent.com/50102522/216857422-a81bd6cc-c08d-4309-8ddb-da6f8cb4ff28.png" width="500" height="450"/>| 
+
+| 할 일 생성 화면 | 히스토리 화면 |
+|:-------:| :-------:|
+| <img src="https://user-images.githubusercontent.com/50102522/216857486-a0fcc3c3-0353-4172-8b81-7251bb81974d.png" width="500" height="450"/>| <img src="https://user-images.githubusercontent.com/50102522/216857500-9eee2ef3-6df2-4bed-86e3-9a25711f927b.png" width="500" height="450"/>|
+
+<br>
+
+## 실행 영상 🎥
+
+<img src="https://user-images.githubusercontent.com/50102522/216858505-885d6772-583a-4e2c-b147-3b991a49e0d3.gif" width="600" height="450"/>
+
+<br>
+
+## 🥸 기능 설명
+
+#### `MongoDB Atlas`와 연동
+- 리모트 서버인 `MongoDB Atlas`와 동기화 되는 기능을 구현
+
+- 생성
+<img src = "https://i.imgur.com/70G6zOn.gif" width=700>
+
+- 수정
+<img src = "https://i.imgur.com/I4I2lhx.gif" width=700>
+
+- 삭제
+<img src = "https://i.imgur.com/Ep60n4o.gif" width=700>
+
+<br>
+
+#### NetWork 모니터링 기능 구현
+- `NWPathMonitor`를 이용하여 사용자가 현재 네트워크와 연결이 되어 있는지 모니터링 해주는 `NetworkMonitor` 타입 구현
+- 네트워크에 연결이 되어 있지 않을 시, `Alert`을 이용해 사용자에게 알려주는 기능 구현
+
+<img src = "https://i.imgur.com/rjRsR5F.png" width=700>
+
+<br>
+
+#### Histroy 기능 구현
+- `popoverPresentationController`를 이용하여 popover 형태의 모달을 만들어주는 기능 구현
+
+<img src = "https://i.imgur.com/TiNuGw3.png" width=700>
+
+<br>
+
+## 핵심 경험 💡
+- [x] UIKit 
+- [x] DatePicker 
+- [x] Realm 
+- [x] MongoDB  
+- [x] Popover 
+- [x] CocoaPods 
